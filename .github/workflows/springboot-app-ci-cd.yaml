@@ -77,7 +77,7 @@ jobs:
       - name: Update K8s manifest with new image tag
         run: |
           kustomize edit set image parkhana2/hello-app=parkhana2/hello-app:${{ steps.vars.outputs.sha }}
-        working-directory: ./springboot-app/hello/k8s
+          working-directory: ./springboot-app/hello/k8s
 
       # 9. 변경된 매니페스트 커밋 및 푸시
       #    변경된 kustomization.yaml 파일을 add, commit, push >> 이 푸시가 ArgoCD가 감지할 트리거

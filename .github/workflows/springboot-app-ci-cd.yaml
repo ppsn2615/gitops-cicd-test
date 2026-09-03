@@ -75,7 +75,8 @@ jobs:
       #    앞에서 빌드한 새 이미지 태그(SHA 태그)로 업데이트
       #    본인의 도커 허브 사용자 이름 
       - name: Update K8s manifest with new image tag
-        run: kustomize edit set image parkhana2/hello-app=parkhana2/hello-app:${{ steps.vars.outputs.sha }}
+        run: |
+          kustomize edit set image parkhana2/hello-app=parkhana2/hello-app:${{ steps.vars.outputs.sha }}
         working-directory: ./springboot-app/hello/k8s
 
       # 9. 변경된 매니페스트 커밋 및 푸시

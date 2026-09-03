@@ -54,8 +54,7 @@ jobs:
           context: ./springboot-app/hello           # 빌드 컨텍스트
           file: ./springboot-app/hello/Dockerfile   # 이미지 빌드에 사용할 Dockerfile
           push: true                                # 이미지 빌드 후 도커 허브에 푸시
-          tags: |                                   # 이미지 태그 (SHA: 고유 식별자, latest: 최신)
-            # 본인의 도커 허브 사용자 이름   => 아래 오른쪽에 주석달지 말것, 소스로 오인함                       
+          tags: |                                   # 이미지 태그 (SHA: 고유 식별자, latest: 최신)                                
             parkhana2/hello-app:${{ steps.vars.outputs.sha }}  
             parkhana2/hello-app:latest
 

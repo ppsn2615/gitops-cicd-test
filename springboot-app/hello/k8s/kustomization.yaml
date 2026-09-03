@@ -10,4 +10,4 @@ resources:
 images:
 - name: parkhana2/hello-app
   newName: parkhana2/hello-app
-  newTag: bba6207
+  newTag: "43071e2"
